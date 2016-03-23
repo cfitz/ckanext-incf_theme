@@ -1,0 +1,8 @@
+{% set organizations = h.get_featured_organizations(2) %}
+{% for organization in organizations %}
+  <div class="span3">
+  <div class="box org-box">
+    {% snippet 'snippets/organization_item.html', organization=organization, truncate=500, truncate_title=35 %}
+  </div>
+</div>
+{% endfor %}
